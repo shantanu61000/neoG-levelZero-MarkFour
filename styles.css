@@ -3,10 +3,12 @@
 :root{
     --primary-color : #6C63FF;
     --dark-grey:#6b7280;
+    --light-grey:#f3f4f6;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0px;
 }
 
 hr{
@@ -99,4 +101,43 @@ hr{
 
 .hero .heading-inverted{
     color: var(--primary-color);
+}
+
+/* section */
+.section{
+    padding: 2rem;
+}
+
+.section h1{
+    text-align: center;
+}
+
+
+.ow{
+    background-color: var(--light-grey);
+}
+
+
+/* footer */
+
+.footer{
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    color:white;
+    border-top-right-radius: 1rem;
+}
+
+.footer .footer-header{
+    font-weight: bold;
+    font-size: large;
+}
+
+.footer .link{
+    color: white;
+}
+
+
+.footer ul{
+    padding-inline-start: 0px;
 }
