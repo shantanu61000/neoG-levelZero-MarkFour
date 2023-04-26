@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
 
 :root{
-    --primary-color : #6C63FF;
-    --dark-grey:#6b7280;
-    --light-grey:#f3f4f6;
+    --bg-color: #F8EDC9;
+    --bg-color-light: #FFF6D9;
+    --bg-color-dark: #E8DAAA;
+    --bg-color-darker: #e4d5a2;
+    --accent-color : #FF820F;
+    --text-color: #000000;
+    --text-light: #393944;
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    font-family: 'Jost', sans-serif;
     margin: 0px;
 }
 
@@ -27,6 +36,7 @@ hr{
     margin: auto;
 }
 
+
 /* links */
 
 .link{
@@ -35,15 +45,27 @@ hr{
 }
 
 .link-primary{
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     border-radius: 0.5rem;
     color: white;
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
 }
 
 .link-secondary{
-    color: var(--primary-color);
+    color: var(--accent-color);
     border-radius: 0.5rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--accent-color);
+    text-align: center;
+    display: block;
+    margin: 0px auto;    
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
 }
 
 /* lists */
@@ -59,22 +81,35 @@ hr{
 
 /* navigation */
 .navigation{
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    border-bottom-left-radius: 1rem;
+    background-color: var(--bg-color-darker);
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 2rem;
 }
+.nav-center{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.nav-center .list-non-bullet{
 
+}
 .navigation .nav-brand{
     font-weight: bold;
     font-size: 1.3rem;
 }
 .navigation .list-non-bullet{
-    text-align: right;
+    text-align: center;
+    padding: 0px;
+    min-width: 300px;
+    max-width: 100%;
 }
 .navigation .link{
-    color: white;
-    text-align: right;
+    color: var(--text-color);
+    text-align: center;
+    padding: 0px;
 }
 
 .navigation .link-active{
@@ -85,47 +120,63 @@ hr{
 
 .hero{
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
+.hero span.text-center{
+    text-align: center;
+    padding-top: 1rem;
+    display: block;
+}
 .hero .hero-img{
-    max-width: 350px;
+    width: 90%;
+    max-width: 400px;
     display: block;
     margin: auto;
 }
 
 .hero .hero-heading{
-    padding-top: 1rem;
-    color: var(--dark-grey);
+    margin-top: 0.5rem;
     text-align: center;
 }
 
 .hero .heading-inverted{
     color: var(--primary-color);
 }
-
-/* section */
-.section{
-    padding: 2rem;
+.hero .my-projects{
+    max-width: 60%;
+}
+.hero .text-primary{
+    color: var(--accent-color);
 }
 
-.section h1{
+/* section */
+section{
+    padding: 1.5rem 2rem 3rem 2rem;
+    max-width: 700px;
+    margin: 0px 1rem;
+    border-radius: 1rem;
+}
+
+section h1{
     text-align: center;
 }
 
 
-.ow{
-    background-color: var(--light-grey);
+.section-ow{
+    background-color: var(--bg-color-light);
 }
 
 
 /* footer */
 
 .footer{
-    background-color: var(--primary-color);
+    background-color: var(--bg-color-darker);
     padding: 2rem 1rem;
     text-align: center;
-    color:white;
-    border-top-right-radius: 1rem;
+    color:var(--text-color);
+    border-top-right-radius: 2rem;
+    margin-top: 3rem;
 }
 
 .footer .footer-header{
@@ -134,10 +185,19 @@ hr{
 }
 
 .footer .link{
-    color: white;
+    color: var(--text-color);
 }
 
 
 .footer ul{
     padding-inline-start: 0px;
+}
+
+@media screen and (min-width:460px) {
+    .navigation .list-non-bullet{
+        text-align: right;
+    }
+    .navigation .link{
+        text-align: right;
+    }
 }
