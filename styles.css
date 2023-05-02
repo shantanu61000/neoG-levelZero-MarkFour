@@ -124,7 +124,6 @@ hr {
 
 .hero {
     padding: 2rem;
-    margin-bottom: 2rem;
 }
 
 .hero span.text-center {
@@ -141,7 +140,6 @@ hr {
 }
 
 .hero .hero-heading {
-    margin-top: 0.5rem;
     text-align: center;
 }
 
@@ -188,7 +186,7 @@ section h1 {
     text-align: center;
     color: var(--text-color);
     border-top-right-radius: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .footer .footer-header {
@@ -301,4 +299,28 @@ header.projects {
         margin: 0px;
     }
 
+}
+
+
+/* blog main page */
+.blogs{
+    padding: 0 2rem;
+  
+}
+.section-blog{
+    margin:0 auto 3rem auto;
+    
+}
+.text-center {
+    text-align: center;
+}
+
+
+article.container-center{
+    padding: 0px 2rem;
+}
+
+
+article h4{
+    margin-top: 0px;
 }
